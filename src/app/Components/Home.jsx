@@ -8,15 +8,46 @@ function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
   const followerRef = useRef(null);
+  const [active, setActive] = useState("home"); // use lowercase
 
-  useEffect(() => {
-    const fadeTimer = setTimeout(() => setFadeOut(true), 1200);
-    const removeTimer = setTimeout(() => setIsLoading(false), 1700);
-    return () => {
-      clearTimeout(fadeTimer);
-      clearTimeout(removeTimer);
-    };
-  }, []);
+ // ✅ 1. Scroll active navbar
+useEffect(() => {
+  const sections = document.querySelectorAll("section");
+
+  const handleScroll = () => {
+    let current = "home";
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 100;
+      const sectionHeight = section.offsetHeight;
+
+      if (
+        window.scrollY >= sectionTop &&
+        window.scrollY < sectionTop + sectionHeight
+      ) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    setActive(current);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
+
+// ✅ 2. Loading animation timer
+useEffect(() => {
+  const fadeTimer = setTimeout(() => setFadeOut(true), 1200);
+  const removeTimer = setTimeout(() => setIsLoading(false), 1700);
+
+  return () => {
+    clearTimeout(fadeTimer);
+    clearTimeout(removeTimer);
+  };
+}, []);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -91,7 +122,7 @@ function Home() {
 
 
 
-    <nav className={`nav ${menuOpen ? "active" : ""}`}>
+    {/* <nav className={`nav ${menuOpen ? "active" : ""}`}>
   <a href="#Home" onClick={() => setMenuOpen(false)}>Home</a>
   <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
   <a href="#capabilities" onClick={() => setMenuOpen(false)}>Capabilities</a>
@@ -100,15 +131,97 @@ function Home() {
   <a href="#applications" onClick={() => setMenuOpen(false)}>Applications</a>
   <a href="#benefits" onClick={() => setMenuOpen(false)}>Benefits</a>
   <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
-  {/* <button 
-    className="mobile-book-btn"
+</nav> */}
+
+
+<nav className={`nav ${menuOpen ? "active" : ""}`}>
+  <a
+    href="#Home"
+    className={active === "home" ? "active-link" : ""}
     onClick={() => {
+      setActive("home");
       setMenuOpen(false);
-      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
     }}
   >
-    Book a Consultation
-  </button> */}
+    Home
+  </a>
+
+  <a
+    href="#about"
+    className={active === "about" ? "active-link" : ""}
+    onClick={() => {
+      setActive("about");
+      setMenuOpen(false);
+    }}
+  >
+    About
+  </a>
+
+  <a
+    href="#capabilities"
+    className={active === "capabilities" ? "active-link" : ""}
+    onClick={() => {
+      setActive("capabilities");
+      setMenuOpen(false);
+    }}
+  >
+    Capabilities
+  </a>
+
+  <a
+    href="#infrastructure"
+    className={active === "infrastructure" ? "active-link" : ""}
+    onClick={() => {
+      setActive("infrastructure");
+      setMenuOpen(false);
+    }}
+  >
+    Infrastructure
+  </a>
+
+  <a
+    href="#process"
+    className={active === "process" ? "active-link" : ""}
+    onClick={() => {
+      setActive("process");
+      setMenuOpen(false);
+    }}
+  >
+    Process
+  </a>
+
+  <a
+    href="#applications"
+    className={active === "applications" ? "active-link" : ""}
+    onClick={() => {
+      setActive("applications");
+      setMenuOpen(false);
+    }}
+  >
+    Applications
+  </a>
+
+  <a
+    href="#benefits"
+    className={active === "benefits" ? "active-link" : ""}
+    onClick={() => {
+      setActive("benefits");
+      setMenuOpen(false);
+    }}
+  >
+    Benefits
+  </a>
+
+  <a
+    href="#contact"
+    className={active === "contact" ? "active-link" : ""}
+    onClick={() => {
+      setActive("contact");
+      setMenuOpen(false);
+    }}
+  >
+    Contact
+  </a>
 </nav>
 
     <div className="cta">
