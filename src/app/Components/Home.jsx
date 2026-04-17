@@ -15,7 +15,7 @@ useEffect(() => {
   const sections = document.querySelectorAll("section");
 
   const handleScroll = () => {
-    let current = "home";
+    let current = "Home";
 
     sections.forEach((section) => {
       const sectionTop = section.offsetTop - 100;
@@ -29,7 +29,8 @@ useEffect(() => {
       }
     });
 
-    setActive(current);
+    // ✅ Prevent infinite updates
+    setActive((prev) => (prev !== current ? current : prev));
   };
 
   window.addEventListener("scroll", handleScroll);
