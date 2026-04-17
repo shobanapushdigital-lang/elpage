@@ -13,11 +13,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Pushdigital | EL",
-  description: "Electroluminescence",
+  title: "Push Digital | Flexible Electronics & Prototyping",
+  description: "Enabling the future of electronics. From concept to small-scale manufacturing, we empower innovation with advanced flexible electronics production and rapid prototyping.",
   icons: {
-    icon: "/web_logo.png"
-    },
+    icon: "/web_logo.png",
+    shortcut: "/web_logo.png",
+    apple: "/web_logo.png",
+  },
+  openGraph: {
+    title: "Push Digital | Flexible Electronics",
+    description: "Enabling the future of electronics.",
+    images: ["/web_logo.png"],
+    type: "website",
+  },
 };
 export default function RootLayout({ children }) {
   return (
