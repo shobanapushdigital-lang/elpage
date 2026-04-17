@@ -337,13 +337,12 @@ section {
 
 /* SECTION */
 .services {
-  
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 1200px;
-  margin: 30 auto;
-  padding: 60px 0
+  margin: 30px auto;
+  padding: 60px 0 100px;
 }
 
 /* TITLE */
@@ -366,7 +365,7 @@ section {
   display: flex;
   justify-content: center;
   gap: 30px;
-
+flex-wrap: wrap; /* ✅ allows wrapping */
 
 }
 
@@ -374,7 +373,8 @@ section {
 .card {
   background: rgba(255, 255, 255, 0.05);
   /* ✅ glass background */
-  padding: 25px;
+  padding: 35px;
+  padding-left: 50px;
   border-radius: 20px;
   backdrop-filter: blur(10px);
   /* ✅ blur effect */
@@ -422,6 +422,13 @@ section {
   line-height: 1.6;
 }
 
+.card img {
+  width: 60px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
 .infrastructure {
  
   font-family: "Space Grotesk", sans-serif;
@@ -448,7 +455,8 @@ section {
   gap: 30px;
   margin-top: 30px;
   width: 100%;
-  padding-left: 10px;
+  padding-left: 60px;
+  padding-right: 0 auto;
 
 }
 
@@ -464,7 +472,7 @@ section {
   width: 300px;
   text-align: left;
   transition: 0.3s;
-
+  padding-left: 50px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -1706,5 +1714,11 @@ section {
   .Glass-video, .lab-video, .tshirt-video {
     height: 250px;
     border-radius: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mouse-follower {
+    display: none !important;
   }
 }

@@ -343,6 +343,7 @@ application readiness.</p>
     </div>
 
   </div>
+</section>
 <section className="infrastructure" id="infrastructure">
   <h2>
     Advanced <span>Infrastructure</span>
@@ -369,8 +370,6 @@ application readiness.</p>
       <h3>Testing & Validation Labs</h3>
     </div>
   </div>
-</section>
-  
 </section>
 
 <section className="Lab-v">
