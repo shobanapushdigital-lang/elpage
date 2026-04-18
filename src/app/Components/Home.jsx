@@ -380,28 +380,46 @@ application readiness.</p>
 </section>
 
 <section className="process" id="process">
-  <h2>
-    From Idea to <span>Market</span>
-  </h2>
+  <div className="process-container"> {/* 👈 common wrapper */}
 
-  <div className="process-steps">
-    <div className="No">1</div>
-    <div className="No">2</div>
-    <div className="No">3</div>
-    <div className="No">4</div>
-    <div className="No">5</div>
-    <div className="No">6</div>
-  </div>
+    <h2>
+      From Idea to <span>Market</span>
+    </h2>
 
-  <hr />
+    <div className="process-steps">
+      <div className="line"></div>
 
-  <div className="process-labels">
-    <p>Concept Development</p>
-    <p>Design & Simulation</p>
-    <p>Prototype Fabrication</p>
-    <p>Testing & Validation</p>
-    <p>Iteration & Optimization</p>
-    <p>Batch Production</p>
+      <div className="step">
+        <div className="No">1</div>
+        <p>Concept Development</p>
+      </div>
+
+      <div className="step">
+        <div className="No">2</div>
+        <p>Design & Simulation</p>
+      </div>
+
+      <div className="step">
+        <div className="No">3</div>
+        <p>Prototype Fabrication</p>
+      </div>
+
+      <div className="step">
+        <div className="No">4</div>
+        <p>Testing & Validation</p>
+      </div>
+
+      <div className="step">
+        <div className="No">5</div>
+        <p>Iteration & Optimization</p>
+      </div>
+
+      <div className="step">
+        <div className="No">6</div>
+        <p>Batch Production</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -489,23 +507,43 @@ application readiness.</p>
 
   <div className="faq-list">
     <div className="faq-item">
-      <span>What is Electroluminescent Ink?</span>
-      <span>⌄</span>
+      <div className="faq-title">
+        <span>What is Electroluminescent Ink?</span>
+        <span>⌄</span>
+      </div>
+      <div className="faq-answer">
+        Electroluminescent ink is a smart material that emits light when an electrical current is applied. It can be printed on flexible substrates to create ultra-thin, energy-efficient light sources consistently.
+      </div>
     </div>
 
     <div className="faq-item">
-      <span>What’s the minimum order?</span>
-      <span>⌄</span>
+      <div className="faq-title">
+        <span>What’s the minimum order?</span>
+        <span>⌄</span>
+      </div>
+      <div className="faq-answer">
+        We specialize in scalable production—from prototyping single units for proof-of-concept to scaling up for batch production, ensuring flexibility tailored to your project.
+      </div>
     </div>
 
     <div className="faq-item">
-      <span>How fast is prototyping?</span>
-      <span>⌄</span>
+      <div className="faq-title">
+        <span>How fast is prototyping?</span>
+        <span>⌄</span>
+      </div>
+      <div className="faq-answer">
+        Our rapid prototyping pipeline generally enables us to design, validate, and produce functional prototypes in just 2 to 4 weeks depending on the complexity of your requirements.
+      </div>
     </div>
 
     <div className="faq-item">
-      <span>What substrates do you support?</span>
-      <span>⌄</span>
+      <div className="faq-title">
+        <span>What substrates do you support?</span>
+        <span>⌄</span>
+      </div>
+      <div className="faq-answer">
+        We support a vast array of flexible materials, primarily including TPU, PET, polyimide, and textiles. We select the best substrate for the specific durability needed.
+      </div>
     </div>
   </div>
 </section>
@@ -533,7 +571,7 @@ application readiness.</p>
     </div>
 
     <div className="footer-links">
-      <h3>Quick Links</h3>
+        <h3 className="quick">Quick Links</h3>
       <div className="links-grid">
         <a href="#Home">Home</a>
         <a href="#infrastructure">Infrastructure</a>
