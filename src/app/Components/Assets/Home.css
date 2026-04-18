@@ -125,7 +125,7 @@ html {
    ============================================================ */
 .nav {
   display: flex;
-  gap: 50px;
+  gap: 20px;
 }
 
 .nav a {
@@ -1164,7 +1164,11 @@ section {
    ============================================================ */
 @media (max-width: 1400px) {
   .nav { gap: 25px; }
-  .cards{width: 1200px;}
+  .cards {
+    width: 100%;
+    max-width: 1200px;   /* 👈 limit but flexible */
+    margin: 0 auto;      /* 👈 center align */
+  }
 }
 
 @media (max-width: 1280px) {
