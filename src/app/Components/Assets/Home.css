@@ -125,7 +125,7 @@ html {
    ============================================================ */
 .nav {
   display: flex;
-  /* gap: 10px; */
+  gap: 10px;
 }
 
 .nav a {
@@ -1216,7 +1216,7 @@ section {
    RESPONSIVE — LAPTOP (1024px - 1199px)
    ============================================================ */
 @media (max-width: 1200px) {
-  .nav { gap: 10px; }
+  .nav { gap: 12px; }
   .nav a { font-size: 14px; }
 
   .hero-content h1 { font-size: 44px; }
