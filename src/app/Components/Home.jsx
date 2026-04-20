@@ -586,8 +586,8 @@ application readiness.</p>
 
     <div className="footer-contact">
       <h3>Contact</h3>
-      <p> <img src="/location_on.png" alt="location" /> 339/97, Lakshmanaswamy Salai,<br />
-         KK Nagar, Chennai - 600 078,<br />
+      <p> <img src="/location_on.png" alt="location" /> 339/97, Lakshmanaswamy Salai, <br />
+      KK Nagar, Chennai - 600 078,<br />
         Tamil Nadu, INDIA.
       </p>
 
