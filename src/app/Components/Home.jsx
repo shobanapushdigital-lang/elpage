@@ -349,7 +349,8 @@ application readiness.</p>
   <h2>
     Advanced <span>Infrastructure</span>
   </h2>
-
+ <p>Our facility is equipped with next-generation additive manufacturing tools and precision <br />
+assembly systems designed specifically for flexible electronics.</p>
   <div className="infra-cards">
     <div className="infra-card">
       <img src="/icon1.png" alt="" />
